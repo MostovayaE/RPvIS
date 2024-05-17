@@ -26,3 +26,9 @@ sum money NOT NULL,
 payment_type VARCHAR(20) NOT NULL,
 isCompleted bool NOT NULL
 );
+
+INSERT INTO clients (lastname, name, surname,passport, phone, address) VALUES ("Мостовая", "Елизавета", "Евгеньевна", "0323111111", "89181111111", "ул. Железнодорожная");
+
+INSERT INTO products (name, price) VALUES ("Товар 1",700);
+
+INSERT INTO contracts(client_id, product_id, pay_date, count, sum, payment_type, isCompleted) VALUES (1, 1, 23.05.2024, 3, 2100, "Карта", true);

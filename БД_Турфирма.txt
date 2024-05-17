@@ -4,6 +4,7 @@ lastname VARCHAR(20) NOT NULL,
 name VARCHAR(20) NOT NULL,
 surname VARCHAR(20) NOT NULL
 );
+
 CREATE TABLE IF NOT EXISTS tourist_info (
 t_id INT PRIMARY KEY NOT NULL UNIQUE REFERENCES tourist (tourist_id),
 pass_info VARCHAR(10) NOT NULL,
@@ -49,3 +50,15 @@ REFERENCES voucher(voucher_id),
 pay_date date,
 deposit money
 );
+
+INSERT INTO tourist (lastname, name, surname) VALUES ("Мостовая", "Елизавета", "Евгеньвна");
+
+INSERT INTO tourist_info (t_id, pass_info, city, country, phone_num, index) VALUES (5,"0326111111","Краснодар","Россия","81981111111", 350040);
+
+INSERT INTO tour(tour_name, price, info) VALUES ("ГастроТур", 5500, "Тур");
+
+INSERT INTO season (tour_id, start_date, end_date, season_is_closed, number_of_places) VALUES (3, 23.05.2024, 23.05.2024, false, 20);
+
+INSERT INTO voucher (tourist_id, s_id) VALUES(2, 1);
+
+INSERT INTO payment (voucher_id, pay_date, deposit) VALUES (2, 20.05.2024, 2000);
